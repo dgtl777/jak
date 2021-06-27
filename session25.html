@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 25</title>
+    <style>
+        body {
+            background-color: palegreen;
+            text-align: center;
+        }
+
+        h1 {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Javascript Regex(Regular Expression)</h1>
+    </header>
+    <input type="text" name="" id="user" placeholder="Enter Name"><br><br>
+    <input type="email" name="" id="email" placeholder="Enter Email"><br><br>
+    <input type="password" name="" id="pass" placeholder="Enter Password"><br><br>
+    <button onclick="check()">Check</button>
+    <h2>Match Pattern</h2>
+    <h2 id="userResult"></h2>
+    <h2 id="emailResult"></h2>
+    <h2 id="passResult"></h2>
+
+</body>
+<script>
+    function check() {
+        var user = document.getElementById("user").value;
+        var email = document.getElementById("email").value;
+        var pass = document.getElementById("pass").value;
+        var userPatt = /[a-z]/gi;
+        var emailPatt = /[@]/gi;
+        var passPatt = /[a-z0-9]/gi;
+
+        if (user.match(userPatt)) {
+            document.getElementById("userResult").innerText =
+                "User Pattern Matched";
+        }
+        else {
+            document.getElementById("userResult").innerText =
+                "User Pattern Not Matched";
+        }
+        if (email.match(emailPatt)) {
+            document.getElementById("emailResult").innerText =
+                "Email Pattern Matched";
+        }
+        else {
+            document.getElementById("emailResult").innerText =
+                "Email Pattern Not Matched";
+        }
+        if (pass.match(passPatt)) {
+            document.getElementById("passResult").innerText =
+                "Password Pattern Matched";
+        }
+        else {
+            document.getElementById("passResult").innerText =
+                "Password Pattern Not Matched";
+        }
+    }
+</script>
+
+</html>
