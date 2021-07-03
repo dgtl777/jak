@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 26</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+            height: 200vh;
+        }
+        h1{
+            color: orange;
+        }
+        #secret{
+            display: none;
+        }
+        img{
+            width: 300px;
+            position:sticky;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Display</h1>
+    </header>
+    <h2>Secret Message</h2>
+    <img id="secret" src="https://www.thestatesman.com/wp-content/uploads/2021/03/lion.jpg" alt="">
+    <h3>Click here to reveal secret message</h3>
+    <input type="text" name="" id="msg">
+    <button onclick="secret()">Click Me!</button><br><br>
+   
+    
+</body>
+<script>
+    function secret(){
+        var msg = document.getElementById("msg").value;
+        if(msg == "jay"){
+        document.getElementById("secret").style.display = 
+        "block";
+        document.getElementsByTagName("h1")[0].style.color = 
+        "red";
+        }
+
+    }
+</script>
+</html>

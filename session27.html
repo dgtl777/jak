@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 27</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            margin: auto;
+        }
+
+        .box:hover {
+            background-color: red;
+        }
+
+        .box:active {
+            background-color: blue;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        #today::after {
+            content: 'in Level 1';
+            color: red;
+        }
+
+        #session::before {
+            content: 'Today ';
+            color: red;
+        }
+
+        #myName::first-line {
+            color: red;
+        }
+
+        ::selection {
+            color: red;
+            background-color: yellow;
+        }
+
+        #today::first-letter {
+            font-size: 48px;
+            color: tomato;
+        }
+
+        #bigbox {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        #move {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #left {
+            width: 400px;
+        }
+
+        #down {
+            margin-top: -205px;
+            height: 400px;
+        }
+
+        #right {
+            margin-top: -280px;
+            height: 217px;
+            width: 400px;
+        }
+
+        #up {
+            margin-top: -500px;
+            height: 400px;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Pseudo Classes</h1>
+    </header>
+    <div class="box">
+
+    </div>
+    <p id="today">Today is our last topic </p>
+    <p id="session">is session 27</p>
+    <p id="myName">Ashwanth, Jagrat and Kavya<br>
+        completing level 1<br> Now they will start level 2 </p>
+
+    <div id="bigbox">
+        <marquee id="left" behavior="alternate" direction="">
+            <div id="move"></div>
+        </marquee>
+        <marquee id="down" behavior="alternate" direction="down">
+            <div id="move">
+            </div>
+        </marquee>
+        <marquee id="right" behavior="alternate" direction="right">
+            <div id="move">
+            </div>
+        </marquee>
+        <marquee id="up" behavior="alternate" direction="up">
+            <div id="move">
+            </div>
+        </marquee>
+
+    </div>
+</body>
+
+</html>
